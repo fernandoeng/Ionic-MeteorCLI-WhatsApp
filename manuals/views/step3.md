@@ -73,7 +73,7 @@ So in order to do that we shall define a helper named `chat`, and use `findOne()
 ```diff
 @@ -0,0 +1,19 @@
 +┊  ┊ 1┊import { Controller } from 'angular-ecmascript/module-helpers';
-+┊  ┊ 2┊import { Chats } from '../../../lib/collections';
++┊  ┊ 2┊import { Chats,Messages } from '../../../lib/collections';
 +┊  ┊ 3┊
 +┊  ┊ 4┊export default class ChatCtrl extends Controller {
 +┊  ┊ 5┊  constructor() {
@@ -132,7 +132,7 @@ So now that we have the chat view and controller, all is left to do is to link t
  ┊ 5┊ 5┊                class="item-chat item-remove-animate item-avatar item-icon-right"
 -┊ 6┊  ┊                type="item-text-wrap">
 +┊  ┊ 6┊                type="item-text-wrap"
-+┊  ┊ 7┊                href="#/tab/chats/{{ chat._id }}">
++┊  ┊ 7┊                href="#!/tab/chats/{{ chat._id }}">
  ┊ 7┊ 8┊        <img ng-src="{{ chat.picture }}">
  ┊ 8┊ 9┊        <h2>{{ chat.name }}</h2>
  ┊ 9┊10┊        <p>{{ chat.lastMessage.text }}</p>
